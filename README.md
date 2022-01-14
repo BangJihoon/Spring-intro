@@ -9,3 +9,5 @@ Spring-Introduction (김영한) 강의 정리
 5. 회원 웹 화면 개발
 6. DB 접근기술 - JPA, JDBC, H2 사용
 7. AOP 
+
+블로그 정리글 참고 : https://bangu4.tistory.com/267
