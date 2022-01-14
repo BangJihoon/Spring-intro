@@ -13,7 +13,7 @@ public class MemberService {
 	private final MemberRepository memberRepository;
 	
 	// Dependence Injection - 호출하는 외부에서 받아 넣어주며 생성하도록한다 -> 인스턴스 동기화를 위함
-	public MemberService(MemberRepository memberRepostory) { 
+	public MemberService(MemberRepository memberRepostory) {  
 		this.memberRepository = memberRepostory;
 	}
 	
