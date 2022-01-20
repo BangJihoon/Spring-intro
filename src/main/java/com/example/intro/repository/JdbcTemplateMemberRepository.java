@@ -1,4 +1,4 @@
-package com.example.intro.repository;
+     package com.example.intro.repository;
 
 import com.example.intro.domain.Member;
 import org.springframework.jdbc.core.JdbcTemplate;
