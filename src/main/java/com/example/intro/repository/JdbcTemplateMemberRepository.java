@@ -1,4 +1,4 @@
-     package com.example.intro.repository;
+package com.example.intro.repository;
 
 import com.example.intro.domain.Member;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -36,15 +36,16 @@ public class JdbcTemplateMemberRepository implements MemberRepository {
     }
     @Override
     public Optional < Member > findByName(String name) {
-        List < Member > result = jdbcTemplate.query("select * from member where name = ? ", memberRowMapper(), name);
-            return result.stream().findAny();
-        }
-        private RowMapper < Member > memberRowMapper() {
-            return (rs, rowNum) -> {
-                Member member = new Member();
-                member.setId(rs.getLong("id"));
-                member.setName(rs.getString("name"));
-                return member;
-            };
-        }
-	}
+    	List < Member > result = jdbcTemplate.query("select * from member where name = ? ", memberRowMapper(), name);
+        return result.stream().findAny();
+    }
+    
+    private RowMapper < Member > memberRowMapper() {
+        return (rs, rowNum) -> {
+            Member member = new Member();
+            member.setId(rs.getLong("id"));
+            member.setName(rs.getString("name"));
+            return member;
+        }; 
+   }
+}
