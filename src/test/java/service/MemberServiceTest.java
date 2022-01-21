@@ -4,7 +4,6 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import com.example.intro.domain.Member;
@@ -49,7 +48,7 @@ public class MemberServiceTest {
 		member2.setName("Spring1");
 
 		// when
-		Long id1 = ms.join(member);		
+		ms.join(member);		
 		assertThrows(IllegalStateException.class,() -> ms.join(member2));
 	}
 	
