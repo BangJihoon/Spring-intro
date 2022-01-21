@@ -1,4 +1,4 @@
-package service;
+package com.example.intro.service;
 
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
@@ -8,7 +8,6 @@ import org.junit.jupiter.api.Test;
 
 import com.example.intro.domain.Member;
 import com.example.intro.repository.MemoryMemberRepository;
-import com.example.intro.service.MemberService;
 
 public class MemberServiceTest {
 

@@ -1,22 +1,25 @@
-package service;
+package com.example.intro.service;
 
-import com.example.intro.domain.Member;
-import com.example.intro.repository.MemberRepository;
-import com.example.intro.service.MemberService;
-import org.junit.jupiter.api.Test;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.transaction.annotation.Transactional;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
+import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.transaction.annotation.Transactional;
+
+import com.example.intro.domain.Member;
+import com.example.intro.repository.MemberRepository;
 
 @SpringBootTest
-@Transactional
+@Transactional 
 class MemberServiceIntegrationTest {
-    @Autowired MemberService memberService;
-    @Autowired MemberRepository memberRepository;
+    @Autowired 
+    MemberService memberService;
+    @Autowired 
+    MemberRepository memberRepository;
+    
     @Test
     public void 회원가입() throws Exception {
         //Given
@@ -35,7 +38,7 @@ class MemberServiceIntegrationTest {
         Member member1 = new Member();
         member1.setName("spring");
         Member member2 = new Member();
-        member2.setName("spring1");
+        member2.setName("spring");
         //When
         memberService.join(member1);
         IllegalStateException e = assertThrows(IllegalStateException.class,() -> memberService.join(member2)); //예외가 발생해야 한다.

@@ -1,4 +1,4 @@
-package repository;
+package com.example.intro.repository;
 
 import java.util.List;
 
@@ -7,7 +7,6 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Test;
 
 import com.example.intro.domain.Member;
-import com.example.intro.repository.MemoryMemberRepository;
 
 public class MemoryMemberRepositoryTest {
 	MemoryMemberRepository repository = new MemoryMemberRepository();

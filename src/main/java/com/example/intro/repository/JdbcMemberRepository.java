@@ -9,9 +9,7 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
-
 import javax.sql.DataSource;
-
 import org.springframework.jdbc.datasource.DataSourceUtils;
 
 import com.example.intro.domain.Member;
